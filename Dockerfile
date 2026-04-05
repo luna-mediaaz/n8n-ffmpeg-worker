@@ -1,6 +1,6 @@
 FROM n8nio/n8n:latest
 USER root
-RUN mkdir -p /home/node/videos && chown -R node:node /home/node/videos
+RUN mkdir -p /home/node/.n8n-files && chown -R node:node /home/node/.n8n-files
 RUN wget -q https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz -P /tmp && \
     tar xf /tmp/ffmpeg-release-amd64-static.tar.xz -C /tmp && \
     mv /tmp/ffmpeg-*-amd64-static/ffmpeg /usr/local/bin/ && \
