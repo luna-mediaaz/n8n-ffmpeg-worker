@@ -7,5 +7,5 @@ RUN cd /tmp && \
     mv ffmpeg-*-amd64-static/ffmpeg /usr/local/bin/ && \
     mv ffmpeg-*-amd64-static/ffprobe /usr/local/bin/ && \
     rm -rf /tmp/ffmpeg*
-RUN cd /usr/local/lib/node_modules/n8n && npm install n8n-nodes-upload-post
+RUN mkdir -p /home/node/.n8n/nodes && cd /home/node/.n8n/nodes && npm install n8n-nodes-upload-post
 USER node
